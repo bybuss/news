@@ -1,0 +1,166 @@
+/* Общие стили */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f0f0f0;
+}
+
+main {
+    padding-bottom: 50px;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header h1 a:hover {
+  color: #4db8ff;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Навигация */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #4db8ff;
+}
+
+/* Стили карточек новостей */
+.news-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.news-card h2 {
+  margin-top: 0;
+}
+
+/* Форма поиска */
+form {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.no-news {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.date {
+    bottom: 0;
+}
+
+.news-content {
+  max-width: 800px; /* Ширина контента новости */
+  margin: 2rem auto; /* Отступы для выравнивания блока по центру и добавления пространства сверху и снизу */
+  background: white; /* Фон новости */
+  padding: 2rem; /* Внутренние отступы для текста */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень для блока с содержимым */
+  border-radius: 8px; /* Скругленные углы для блока */
+}
+
+.news-title {
+  margin: 0; /* Убираем отступы заголовка */
+  color: #333; /* Цвет заголовка */
+  font-size: 2rem; /* Размер шрифта заголовка */
+  text-align: center; /* Выравнивание заголовка по центру */
+}
+
+.news-date {
+  color: #666; /* Цвет даты */
+  text-align: center; /* Выравнивание даты по центру */
+  margin-bottom: 2rem; /* Отступ снизу для даты */
+}
+
+.return-link {
+  display: block; /* Сделать ссылку блочным элементом */
+  width: fit-content; /* Подогнать ширину ссылки под содержимое */
+  margin: 2rem auto; /* Выравнивание ссылки по центру и отступ сверху и снизу */
+  text-align: center; /* Выравнивание текста ссылки по центру */
+  padding: 0.5rem 1rem; /* Отступы внутри ссылки */
+  background-color: #333; /* Фон ссылки */
+  color: white; /* Цвет текста ссылки */
+  border-radius: 4px; /* Скругленные углы ссылки */
+  text-decoration: none; /* Убираем подчеркивание текста ссылки */
+  transition: background-color 0.3s; /* Плавный переход фона при наведении */
+}
+
+.return-link:hover {
+  background-color: #555; /* Изменение фона при наведении */
+}

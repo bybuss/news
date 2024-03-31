@@ -1,0 +1,28 @@
+<!-- index.html -->
+{% extends "base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block header %}
+<form action="/" method="get">
+    <input type="text" name="q" placeholder="Поиск новостей..." value="{{ request.query_params.get('q', '') }}">
+    <button type="submit">Поиск</button>
+</form>
+{% endblock %}
+
+{% block content %}
+{% if news_list %}
+<div class="news-cards">
+    {% for news_item in news_list %}
+        <div class="news-card">
+            <h2><a href="/news/{{ news_item.id }}">{{ news_item.title }}</a></h2>
+            <p class="date">{{ news_item.date }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="no-news">
+    <p>😶‍🌫️ Новостей пока нет..</p>
+</div>
+{% endif %}
+{% endblock %}

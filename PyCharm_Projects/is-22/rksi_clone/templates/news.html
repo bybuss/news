@@ -1,0 +1,13 @@
+<!-- news.html -->
+{% extends "base.html" %}
+
+{% block title %}{{ news_item.title }}{% endblock %}
+
+{% block content %}
+<div class="news-content">
+    <h1 class="news-title">{{ news_item.title }}</h1>
+    <p class="news-date">{{ news_item.date }}</p>
+    <div>{{ news_item.content }}</div>
+    <a href="/" class="return-link">Вернуться на главную</a>
+</div>
+{% endblock %}
